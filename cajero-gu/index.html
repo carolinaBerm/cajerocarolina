@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/view/image/icon-atm.png" type="image/x-icon">
+
+    <!--Conexión Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap" rel="stylesheet">
+
+    <!--Conexión CSS-->
+    <link rel="stylesheet" href="./assets/view/css/style.css">
+
+    <!--Conexión de Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous" />
+    <title>Cajero GU | Grupo Unión</title>
+</head>
+
+<body class="nav">
+
+    <!--Login-->
+    <section id="login" class="form-login">
+        <h5>Inicio de sesión Cajero GU
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 128 128">
+                <path fill="#FFC107"
+                    d="M116.34 101.95H11.67c-4.2 0-7.63-3.43-7.63-7.63V33.68c0-4.2 3.43-7.63 7.63-7.63h104.67c4.2 0 7.63 3.43 7.63 7.63v60.64c0 4.2-3.43 7.63-7.63 7.63z" />
+                <path fill="#424242" d="M4.03 38.88h119.95v16.07H4.03z" />
+                <path fill="#FFF"
+                    d="M114.2 74.14H13.87c-.98 0-1.79-.8-1.79-1.79v-8.41c0-.98.8-1.79 1.79-1.79H114.2c.98 0 1.79.8 1.79 1.79v8.41c-.01.98-.81 1.79-1.79 1.79z" />
+                <path fill="none" stroke="#424242" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"
+                    stroke-width="2"
+                    d="M23.98 70.49c.56-1.08.71-2.34 1.21-3.45c.5-1.11 1.59-2.14 2.79-1.95c1.11.18 1.8 1.29 2.21 2.33c.57 1.45.88 3 .92 4.56c.01.32-.01.67-.22.92c-.37.42-1.13.21-1.42-.27c-.29-.48-.22-1.09-.09-1.64c.62-2.55 2.62-4.72 5.11-5.54c.26-.09.53-.16.8-.11c.58.11.9.71 1.16 1.23c.61 1.19 1.35 2.32 2.2 3.35c.34.42.73.83 1.25.99c1.71.5 2.7-2.02 4.35-2.69c1.98-.8 3.91 1.29 6.01 1.68c3.07.57 4.7-1.82 7.39-2.43c.36-.08.75-.13 1.11-.03c.66.19 1.07.82 1.46 1.39c.91 1.34 2.21 2.66 3.83 2.67c1.03.01 1.98-.52 2.92-.97c3.33-1.59 7.26-2.25 10.74-1.03" />
+            </svg>
+        </h5>
+
+
+
+        <input type="text" name="username" id="username" class="controls" placeholder="Usuario" autocomplete="name">
+        <input type="password" name="password" id="password" class="controls" placeholder="Contraseña">
+        <input type="button" id="loginButton" class="buttons" value="Ingresar">
+
+        <p><a href="#">¿Olvidastes tu Contraseña?</a></p>
+
+        <div class="socials-row">
+            <a href="#" title="Use Google" id="registerGoogle">
+                <img src="./assets/view/image/google.png" alt="Google">
+                Sign up with Google
+            </a>
+            <a href="#" title="Use Apple" id="registerApple">
+                <img src="./assets/view/image/apple.png" alt="Apple">
+                Sign up with Apple
+            </a>
+        </div>
+    </section>
+    <!-- <p id="message"></p> -->
+
+    <!--Register Google-->
+    <section id="sectionRegisterGoogle" class="sectionRegisterGoogle">
+        <p>Crear cuenta con Google</p>
+    </section>
+
+    <!--Register Apple-->
+    <section id="sectionRegisterApple" class="sectionRegisterApple">
+        <p>Crear cuenta con Apple</p>
+    </section>
+
+    <!--Panel Home-->
+    <main id="panel" class="panel">
+        <!-- <h1>Bienvenidos al Cajero GU</h1> -->
+        <div class="background">
+            <nav class="menu__wrapper">
+                <div class="menu__bar">
+                    <a href="#" title="Logo" class="logo" id="logo">
+                        <img src="./assets/view/image/icon-atm.png" alt="">
+                    </a>
+
+                    <ul class="navigation">
+                        <li>
+                            <button id="BcheckBalance">
+                                Consultar Saldo
+                                <svg aria-hidden="true" height="24" viewBox="0 0 24 24" version="1.1" width="24"
+                                    data-view-component="true" class="octicon octicon-package color-fg-subtle mr-1">
+                                    <!-- <path
+                                        d="M16.53 9.78a.75.75 0 0 0-1.06-1.06L11 13.19l-1.97-1.97a.75.75 0 0 0-1.06 1.06l2.5 2.5a.75.75 0 0 0 1.06 0l5-5Z">
+                                    </path>
+                                    <path
+                                        d="m12.54.637 8.25 2.675A1.75 1.75 0 0 1 22 4.976V10c0 6.19-3.771 10.704-9.401 12.83a1.704 1.704 0 0 1-1.198 0C5.77 20.705 2 16.19 2 10V4.976c0-.758.489-1.43 1.21-1.664L11.46.637a1.748 1.748 0 0 1 1.08 0Zm-.617 1.426-8.25 2.676a.249.249 0 0 0-.173.237V10c0 5.46 3.28 9.483 8.43 11.426a.199.199 0 0 0 .14 0C17.22 19.483 20.5 15.461 20.5 10V4.976a.25.25 0 0 0-.173-.237l-8.25-2.676a.253.253 0 0 0-.154 0Z">
+                                    </path> -->
+
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                        viewBox="0 0 128 128">
+                                        <defs>
+                                            <path id="notoV1CreditCard0"
+                                                d="M125.76 64.91c2.32 2.99 2.04 6.61-.68 8.03l-82.41 43.15c-3.62 1.88-8.38.33-10.54-3.45L1.46 59.07c-1.79-3.13-.4-6.8 3.03-8.17l79.49-31.67c2.66-1.05 6.41.15 8.39 2.7l33.39 42.98z" />
+                                        </defs>
+                                        <use fill="#fcc21b" href="#notoV1CreditCard0" />
+                                        <clipPath id="notoV1CreditCard1">
+                                            <use href="#notoV1CreditCard0" />
+                                        </clipPath>
+                                        <path fill="#2f2f2f" d="M106.86 35.82L8.43 79.41L-.02 64.45l97.55-40.54z"
+                                            clip-path="url(#notoV1CreditCard1)" />
+                                        <path fill="#fff"
+                                            d="M119.26 64.62c1.14 1.5.98 3.3-.4 3.99l-11.09 5.66c-1.43.73-3.54.05-4.68-1.51l-6.51-8.93c-1.09-1.51-.82-3.29.6-3.97l11.03-5.25c1.36-.65 3.36 0 4.48 1.44l6.57 8.57z" />
+                                    </svg>
+                                </svg>
+                            </button>
+
+                            <button id="transfer">
+                                Transferir
+                                <!-- <svg aria-hidden="true" height="24" viewBox="0 0 24 24" version="1.1" width="24"
+                                    data-view-component="true"
+                                    class="octicon octicon-shield-check color-fg-subtle mr-3">
+                                    <path
+                                        d="M12.876.64V.639l8.25 4.763c.541.313.875.89.875 1.515v9.525a1.75 1.75 0 0 1-.875 1.516l-8.25 4.762a1.748 1.748 0 0 1-1.75 0l-8.25-4.763a1.75 1.75 0 0 1-.875-1.515V6.917c0-.625.334-1.202.875-1.515L11.126.64a1.748 1.748 0 0 1 1.75 0Zm-1 1.298L4.251 6.34l7.75 4.474 7.75-4.474-7.625-4.402a.248.248 0 0 0-.25 0Zm.875 19.123 7.625-4.402a.25.25 0 0 0 .125-.216V7.639l-7.75 4.474ZM3.501 7.64v8.803c0 .09.048.172.125.216l7.625 4.402v-8.947Z">
+                                    </path>
+                                </svg> -->
+
+                                <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 48 48">
+                                    <path fill="#78909C"
+                                        d="M40 41H8c-2.2 0-4-1.8-4-4V16.1c0-1.3.6-2.5 1.7-3.3L24 0l18.3 12.8c1.1.7 1.7 2 1.7 3.3V37c0 2.2-1.8 4-4 4z" />
+                                    <path fill="#AED581" d="M14 1h20v31H14z" />
+                                    <g fill="#558B2F">
+                                        <path d="M13 0v33h22V0H13zm20 31H15V2h18v29z" />
+                                        <path
+                                            d="M34 3c0 1.7-.3 3-2 3s-3-1.3-3-3s1.3-2 3-2s2 .3 2 2zM16 1c1.7 0 3 .3 3 2s-1.3 3-3 3s-2-1.3-2-3s.3-2 2-2z" />
+                                        <circle cx="24" cy="8" r="2" />
+                                        <circle cx="24" cy="20" r="6" />
+                                    </g>
+                                    <path fill="#CFD8DC"
+                                        d="M40 41H8c-2.2 0-4-1.8-4-4V17l20 13l20-13v20c0 2.2-1.8 4-4 4z" />
+                                </svg> -->
+
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 128 128">
+                                    <path fill="#E0E0E0"
+                                        d="M56.48 35.92c.6-2.69.14-1.41-3.73-7.07c-3.48-5.08-2.76-12.3-6.88-15.89c-2.53-2.2-5.7-4.67-17.51 1.27c-4.1 2.06-12.29 8.85-21.57 11.96c-7.47 2.5-3.33 5.52-1.74 6.08c5.66 1.99 13.15-2.31 13.15-2.31s-10.74 7.02-4.43 8.68c5.12 1.35 11.57-4.8 11.57-4.8s-6.32 6.7-1.15 8.42c3.55 1.18 10.6-5.56 10.6-5.56s-4.93 6.85-2.55 8.3c3.62 2.2 9.55-3.47 9.55-3.47s-4.71 6.88-2.25 8c3.68 1.68 9.14-3.04 9.14-3.04s6.72-5.76 7.8-10.57z" />
+                                    <path fill="#BDBDBD"
+                                        d="M35.68 13.76s-6.44 3.78-8.79 6.82c-.31.4-2.24 2.33-.54 3.44c.43.28 1.71.1 2.47-.36c3.46-2.1 9.58-7.08 10.25-6.82c.67.26-5.47 4.3-7.45 9.19c-.74 1.84.7 3.16 4.45.95c4.08-2.4 7.59-6.63 8.18-6.61c0 0-1.64 2.86-3.74 5.12c-2.14 2.31-3.65 4.66-2.07 5.4c1.99.94 6.29-1.61 6.29-1.61s-2.74 3.32-6.29 4.07c-1.25.27-2.23.1-2.83-.58c-.91-1.04-.56-2.64-.56-2.64c-1.89.75-5.15 1.97-7.09.33c-1.51-1.28.55-5.03.55-5.03s-3.65 2.02-5.73 1.41c-1.08-.32-2.73-1.88-.32-5.19c3.8-5.17 13.22-7.89 13.22-7.89zm7.7 36.37c4.17-5.42 8.34-10.83 12.51-16.25l-.36-1.56c-.18-.55-1.82-.62-4.09.69c-1.52.88-4.31 4.04-6.1 2.3c-1.24-1.2 2.32-5.49 2.32-5.49c-.49.01-4.44 2.65-5.07 5.3c-.54 2.25-.02 4.89 5.06 2.32c.15-.08.31-.17.46-.26c-.64 1.01-1.22 2.07-1.71 3.15c-1.42 3.12-2.26 6.46-3.02 9.8z" />
+                                    <linearGradient id="notoMoneyWithWings0" x1="47.717" x2="47.717" y1="25.515"
+                                        y2="25.515" gradientTransform="rotate(36.505 86.34 69.442)"
+                                        gradientUnits="userSpaceOnUse">
+                                        <stop offset="0" stop-color="#43A047" />
+                                        <stop offset=".999" stop-color="#66BB6A" />
+                                    </linearGradient>
+                                    <path fill="url(#notoMoneyWithWings0)" d="m81.39 11.13l.07.05" />
+                                    <path fill="#66BB6A"
+                                        d="M87.13 70.83c-10.05 15.06-18.5 31.65-37.72 36.73c-.2.05-.41-.01-.55-.16l-31.4-34.65c-.93-1.03-.47-2.66.85-3.09c12.91-4.24 20.97-14.34 28.15-25.11c9.9-14.83 18.38-31.15 36.99-36.5c.71-.27 1.54-.1 2.08.49c4.17 4.6 35.62 34.54 35.67 34.6c.02.01-26.36 16.13-34.07 27.69z" />
+                                    <path fill="#FFF"
+                                        d="M58.11 77.71c-.68-.68-1.49-1.02-2.43-1.01s-2.16.39-3.67 1.14c-2.05 1.09-3.83 1.6-5.32 1.55c-1.49-.06-2.83-.68-4.01-1.87c-1.21-1.21-1.85-2.56-1.91-4.04c-.07-1.48.44-2.91 1.53-4.29l-1.91-1.92a.736.736 0 0 1 0-1.03l.62-.62c.28-.28.74-.28 1.03 0l1.92 1.93c1.41-1.07 2.9-1.51 4.46-1.33c1.4.17 2.78.86 4.13 2.1c.26.24.26.66.01.91l-1.14 1.14c-.24.24-.63.24-.88.01c-.9-.78-1.83-1.23-2.78-1.33c-1.11-.12-2.09.24-2.93 1.08c-.88.88-1.33 1.78-1.34 2.69c-.01.92.39 1.79 1.2 2.6c.75.76 1.6 1.11 2.54 1.07c.94-.04 2.15-.44 3.65-1.2s2.77-1.23 3.85-1.42c1.07-.19 2.05-.14 2.93.14c.88.29 1.71.82 2.49 1.6c1.24 1.25 1.87 2.63 1.88 4.14c.01 1.51-.59 3.01-1.81 4.5l1.6 1.6c.28.28.28.74 0 1.03l-.61.61c-.28.28-.74.28-1.03 0l-1.6-1.6c-1.5 1.24-3.07 1.83-4.7 1.75c-1.45-.07-2.84-.69-4.16-1.86a.62.62 0 0 1-.01-.91l1.16-1.15c.23-.23.6-.25.85-.04c.89.77 1.81 1.16 2.76 1.18c1.09.02 2.13-.47 3.12-1.46c.97-.96 1.5-1.96 1.59-2.97c.07-1.01-.28-1.92-1.08-2.72z" />
+                                    <path fill="#FFF"
+                                        d="m60.67 84.74l-2.1 1.17l-16.23-16.66l-.55-.56l2.17-1.13l16.23 16.7z" />
+                                    <circle cx="75.88" cy="45.55" r="14.42" fill="#2E7D32" opacity=".5" />
+                                    <path fill="#2E7D32"
+                                        d="M92.16 78.42c-5.15 7.72-12.57 22.45-22.79 30.55c-9.38 7.44-21.21 11.11-21.21 11.11L15.61 81.96l1.35-10.46l31.92 35.91c.13.14.33.21.52.16c19.23-5.08 27.68-21.67 37.73-36.73c7.71-11.56 19.24-23.88 34.08-27.68c1.18 1.3.66 12.2-.63 12.63c-13.15 4.36-21.22 11.82-28.42 22.63z" />
+                                    <path fill="#FFC06C"
+                                        d="m78.85 83.52l3.02 11.15s9.2-13.46 10.69-16.72L89.22 67.9c-4.46 5.55-10.37 15.62-10.37 15.62z" />
+                                    <path fill="#2E7D32"
+                                        d="M78.07 17.01c.77 1.11 2.12 2.26 4.29 2.93c.77.24 1.58.36 2.39.36c1.72 0 3.16-.53 4.13-1.02c2.43 2.44 5.47 5.41 8.41 8.29c2.88 2.82 5.84 5.72 8.25 8.13c-.78 1.19-1.4 2.99-1.14 5.42c.12 1.12.91 2.26 1.75 3.19c-5.32 3.42-15.53 11.02-26 24.42c-2.21 2.83-4.37 5.97-6.45 9c-5.18 7.54-10.53 15.32-17.65 20.08c-.84-1.37-2.39-3.03-5.16-3.72c-.67-.17-1.33-.25-1.96-.25c-1.78 0-3.18.66-4.18 1.44l-15.1-17.36c1.27-.99 2.46-2.68 2.58-5.29c.06-1.22-.59-2.33-1.33-3.17c7.36-5.45 15.13-14.14 19.31-20.38c.61-.91 1.24-1.86 1.89-2.84c6.54-9.87 15.4-23.19 25.97-29.23m.79-2.34c-12.72 6.3-22.85 22.71-30.06 33.45c-4.72 7.03-13.25 16.2-20.6 21.15c0 0 2.41 1.71 2.33 3.26c-.2 4.16-3.58 4.86-3.58 4.86l17.75 20.4s1.3-2.28 4.22-2.28c.47 0 .99.06 1.55.2c4.02 1 4.83 4.54 4.83 4.54c11.34-6.6 18.19-20.27 26.17-30.5c10.83-13.87 21.6-21.73 27.43-25.18c0 0-2.68-2.17-2.83-3.65c-.41-3.89 1.79-5.29 1.79-5.29c-5.15-5.21-13.61-13.32-18.73-18.51c0 0-1.86 1.46-4.39 1.46c-.6 0-1.24-.08-1.89-.28c-3.68-1.11-3.99-3.63-3.99-3.63z" />
+                                    <path fill="#FFECB3"
+                                        d="m53.82 33.32l-9.73 14.71l34.76 35.49s5.68-8.98 10.36-15.62L53.82 33.32z" />
+                                    <path fill="#D69136"
+                                        d="M90.62 72.12s-6.86 3.49-8.73 14.13c-.71 4.02-.01 8.42-.01 8.42l5.66-8.71l4.05-12.11l-.97-1.73z"
+                                        opacity=".68" />
+                                    <path fill="#E0E0E0"
+                                        d="M88.65 74.43c1.99-1.91 2.65-2.5 8.87-2.95c6.14-.45 8.96-3.14 16.72-1.53c3.28.68 8.48 3.68 7.16 15.64c-.5 4.56-.38 15.1 1.77 24.65c1.73 7.68-3 5.71-4.3 4.64c-4.64-3.81-4.84-12.44-4.84-12.44s-.44 12.82-5.13 8.29c-3.8-3.68-1.89-12.38-1.89-12.38s-2.46 8.88-6.61 5.34c-2.85-2.43-.73-11.95-.73-11.95s-3.31 7.77-5.77 6.48c-3.76-1.96-1.98-9.97-1.98-9.97s-3.44 7.59-5.68 6.06c-3.34-2.28-2.13-9.39-2.13-9.39s.98-7.08 4.54-10.49z" />
+                                    <path fill="#BDBDBD"
+                                        d="M118.34 79.28s.48 6.18.05 9.87c-.27 2.29-.39 4.39-2.49 4.08c-.51-.08-1.7-1.07-1.91-4.88c-.22-4.04.62-9.38.03-9.78c-.59-.41-.62 6.6-3.54 10.99c-1.1 1.65-2.95 1.83-3.24-2.52c-.32-4.73 2.13-10.33 1.78-10.81c0 0-2.07 2.55-3.27 6.16c-1.2 3.61-1.73 5.31-3.14 4.27c-2.53-1.86 1.18-9.27 1.18-9.27s-2.72 2.43-3.9 5.83c-.75 2.16-.34 5.71 1.58 6.61c2.26 1.06 3.58-.83 3.58-.83s.48 6.05 3.43 5.92c2.83-.13 3.55-3.32 3.55-3.32s-.12 3.08 2.74 5.19c1.39 1.03 4.62 1.2 5.02-2.88c.65-6.62-1.45-14.63-1.45-14.63zm-23.27-2.17c-.61-.15-1.49 2.6-2.59 4.15c-.42.58-1.32 1.77-2.7 1.67c-1.38-.1-.29-4.16-.61-3.94c-.32.22-1.61 2.39-1.1 4.91c.14.7.85 1.53 1.55 1.64c2.62.42 3.77-2.8 3.77-2.8s-.39 3.85 2.2 4.25c3.13.48 3.77-4.45 3.49-4.63c-.28-.18-1.29 3.1-3.52 1.7c-1.83-1.16.12-6.79-.49-6.95z" />
+                                    <path fill="#206022"
+                                        d="m15.61 81.95l32.43 37.99s1.45-2.15 1.78-5.5c.29-2.92-.73-6.8-.73-6.8L16.96 71.49l-1.35 10.46z" />
+                                </svg>
+
+                            </button>
+
+                            <button id="record">
+                                Consignar
+                                <!-- <svg aria-hidden="true" height="24" viewBox="0 0 24 24" version="1.1" width="24"
+                                    data-view-component="true" class="octicon octicon-package color-fg-subtle mr-3">
+                                    <path
+                                        d="M12.876.64V.639l8.25 4.763c.541.313.875.89.875 1.515v9.525a1.75 1.75 0 0 1-.875 1.516l-8.25 4.762a1.748 1.748 0 0 1-1.75 0l-8.25-4.763a1.75 1.75 0 0 1-.875-1.515V6.917c0-.625.334-1.202.875-1.515L11.126.64a1.748 1.748 0 0 1 1.75 0Zm-1 1.298L4.251 6.34l7.75 4.474 7.75-4.474-7.625-4.402a.248.248 0 0 0-.25 0Zm.875 19.123 7.625-4.402a.25.25 0 0 0 .125-.216V7.639l-7.75 4.474ZM3.501 7.64v8.803c0 .09.048.172.125.216l7.625 4.402v-8.947Z">
+                                    </path>
+                                </svg> -->
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 128 128">
+                                    <path fill="#fcc21b"
+                                        d="M68.43 5.38c.89-1.95 2.55-2.5 3.93-2.56c2.1-.1 4.3 1.35 6.37 3.06C80.2 7.54 81.96 8.82 84 9.72c1.41.5 2.81.6 4.23.53c2-.1 4.03-.54 6.04-.64l.11-.01l.91-.08c2.3-.11 4.47.43 6.53 1.62c1.89 1.72 2.72 3.86 2.46 6.44c-.44 2.13-.06 4.08 1.13 5.85c2.05 1.44 4.2 2.7 6.46 3.77c2.34 1.28 3.81 3.21 4.45 5.78c.23 2.72-1.03 4.46-3.75 5.21c-3.54.89-8.3.89-12.31 3.99c-5.86 4.89-7.7 9.82-10.25 10.57c-1.25-1.42-9.05-7.45-22.13-10.34c-2.34-8.07-3.76-27.55.55-37.03z" />
+                                    <path fill="#d19b15"
+                                        d="M81.63 40.69c2.3-4.6 8.85-12.69 10.42-11.09c1.55 1.74-2.02 10.78-4.53 15.21c-.89-.94-3.76-2.91-5.01-3.24" />
+                                    <path fill="#8d6e63"
+                                        d="M93.2 55.42c-1.35 0-2.67-.69-3.42-1.93c-6.88-11.32-22.46-10.13-22.61-10.11c-2.2.18-4.14-1.44-4.33-3.63a4.006 4.006 0 0 1 3.61-4.34c.84-.08 20.67-1.71 30.17 13.94c1.15 1.89.54 4.35-1.34 5.49c-.66.39-1.37.58-2.08.58z" />
+                                    <path fill="#fcc21b"
+                                        d="M96.06 122.07c-17.13 4.22-40.94 3.92-57.95.56C22.19 119.48 10 110.09 11.4 91.61c1.42-18.7 13.81-36.31 30.85-44.07c16.49-7.51 38.62-11.17 50.28 5.87c2.9 4.24 8.44 13.65 8.7 18.27c.02.37.04.7.12 1.02c.02 1.16.49 2.33 1.63 3.19c7.33 5.55 12.67 12.91 13.65 23c1.16 12.03-10.22 20.63-20.57 23.18z" />
+                                    <path fill="#424242"
+                                        d="M80.87 91.13c-2.08-3.38-5.91-7.05-9.53-10.2l2.81-7.78c2.5 1.95 4.7 3.78 6.42 5.36c.28.27.72.29 1.04.06l6.44-4.79c.18-.14.29-.34.32-.57a.8.8 0 0 0-.21-.62c-1.91-2.13-6.05-5.86-10.58-8.93l1.65-4.56c.19-.52-.07-1.09-.6-1.29l-7.57-2.74c-.52-.19-1.1.08-1.29.6l-1.23 3.41c-7.13-2.21-12.79-1.5-17.23 2.21c-3.48 2.92-4.98 7.09-3.92 10.87c1.08 4.03 4.24 6.79 8.24 10.28l.51.45c.93.8 1.92 1.63 2.89 2.46l-3.42 9.46c-4.49-2.94-8.25-7.01-8.89-7.9a.806.806 0 0 0-1.08-.21l-7.42 4.74c-.18.11-.31.3-.36.52c-.04.21 0 .43.12.61c2.23 3.36 5.88 7.12 9.77 10.06c.93.7 2.33 1.68 4.05 2.71l-1.29 3.55c-.18.52.08 1.09.6 1.28l7.58 2.75c.52.19 1.1-.08 1.29-.6l1.07-2.96c6.92 1.88 13 .79 17.7-3.23c4.54-3.89 5.32-9.35 2.12-15zM65.18 68.4l-2.07 5.73c-1.93-1.5-2.96-2.63-2.23-4.25c.76-1.66 2.65-1.77 4.3-1.48zm2.05 23.9c1.33 1.29 2.27 2.48 2.36 3.57c.04.62-.19 1.22-.73 1.84c-.94 1.09-2.44 1.3-3.99 1.11l2.36-6.52z" />
+                                </svg>
+                            </button>
+
+                            <button id="withdraw">
+                                Retirar
+                                <!-- <svg aria-hidden="true" height="24" viewBox="0 0 24 24" version="1.1" width="24"
+                                    data-view-component="true" class="octicon octicon-package color-fg-subtle mr-3">
+                                    <path
+                                        d="M12.876.64V.639l8.25 4.763c.541.313.875.89.875 1.515v9.525a1.75 1.75 0 0 1-.875 1.516l-8.25 4.762a1.748 1.748 0 0 1-1.75 0l-8.25-4.763a1.75 1.75 0 0 1-.875-1.515V6.917c0-.625.334-1.202.875-1.515L11.126.64a1.748 1.748 0 0 1 1.75 0Zm-1 1.298L4.251 6.34l7.75 4.474 7.75-4.474-7.625-4.402a.248.248 0 0 0-.25 0Zm.875 19.123 7.625-4.402a.25.25 0 0 0 .125-.216V7.639l-7.75 4.474ZM3.501 7.64v8.803c0 .09.048.172.125.216l7.625 4.402v-8.947Z">
+                                    </path>
+                                </svg> -->
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 64 64">
+                                    <path fill="#afcddb"
+                                        d="M62.5 22.3c1.7 1.7 2 4.2.8 5.7L33.7 62.4c-1.8 2.1-4.9 2.1-7 .1L1.5 37.3c-2-2-2-5.2.1-7L35.9.8c1.5-1.3 4-.9 5.7.8l20.9 20.7" />
+                                    <path fill="#333" d="M50.8 10.7L12.6 48.4l-8.9-8.9L43.5 3.4z" />
+                                    <path fill="#fff" d="M49.4 18.3L22.6 45.8l7.2 7.2l25.9-28.4z" />
+                                    <g fill="#4f5b60">
+                                        <path
+                                            d="M34.1 43.3c-1.5-1.4-.6-4-.1-5.4c.9-2.2 1.8 2 1.8 2.7c.2 2.1-.1 4.3-.6 6.4c-.3 1.2-.7 2.3-1.3 3.4c-.3.7-.8 1.3-1.4 1.7c-1.5.9-2.4 0-2.7-2.5c.2-.8.5-1.5 1.1-2.1c1.9-2.4 4.9-3.5 7.1-5.4c.2-.2-.1-.5-.3-.3c-2.6 2.2-8 4-8.3 8.3c-.2 2.8 2.7 3.5 4.2 1.9c2-2.1 2.5-5.8 2.7-8.6c.1-1.6.5-6.2-1.9-6.7c-.1 0-.2 0-.2.1c-1 1.7-2.3 5.2-.3 7c.1.1.4-.3.2-.5" />
+                                        <path
+                                            d="M37.4 41.7c2.1 1.2 2.7-3.5 2.4-4.8c0-.2-.3-.2-.4-.1c-1.1.9-1.3 3.3-.4 4.7c.1.2.3.2.4 0c.7-1.3 1.1-2.6 1.6-4c.2-.6.7-.4 1.1-.8l2.4-2.4c1-1 1.3-2.4 2.2-3.4c1.2-1.3 2.3-1.9 2.9-3.7c.1-.4.1-1.4-.6-1.4c-1.4-.1-2.6 2.8-.7 2.5c2.2-.3 4.2-2.9 5.6-4.3c.2-.2-.1-.5-.3-.3c-.7.7-1.5 1.4-2.2 2c-.6.5-1.2 1-1.9 1.5c-.3.2-2.9 1.4-1.3-.5c.3.2.6.4.9.7c-.1.2-.2.5-.3.7c-.2.4-.5.8-.8 1.2c-.5.7-1.4 1.1-2 1.8c-.8.9-1.1 2.1-1.9 3c-.4.4-2.3 2.9-3 2.6c-.1 0-.2 0-.2.1c-.2.7-.4 1.3-.7 2c-.1.2-1 2.1-1 2.2c-.4-1-.3-2.2.1-3.1c.3.5.3 1.1.1 1.6c-.2 1.2-.8 1.9-1.8 2.1c-.3-.5-.5-.1-.2.1" />
+                                    </g>
+                                </svg>
+
+                            </button>
+
+                            <button id="movements">
+                                Movimientos
+                                <!-- <svg aria-hidden="true" height="24" viewBox="0 0 24 24" version="1.1" width="24"
+                                    data-view-component="true" class="octicon octicon-workflow color-fg-subtle mr-3">
+                                    <path
+                                        d="M1 3a2 2 0 0 1 2-2h6.5a2 2 0 0 1 2 2v6.5a2 2 0 0 1-2 2H7v4.063C7 16.355 7.644 17 8.438 17H12.5v-2.5a2 2 0 0 1 2-2H21a2 2 0 0 1 2 2V21a2 2 0 0 1-2 2h-6.5a2 2 0 0 1-2-2v-2.5H8.437A2.939 2.939 0 0 1 5.5 15.562V11.5H3a2 2 0 0 1-2-2Zm2-.5a.5.5 0 0 0-.5.5v6.5a.5.5 0 0 0 .5.5h6.5a.5.5 0 0 0 .5-.5V3a.5.5 0 0 0-.5-.5ZM14.5 14a.5.5 0 0 0-.5.5V21a.5.5 0 0 0 .5.5H21a.5.5 0 0 0 .5-.5v-6.5a.5.5 0 0 0-.5-.5Z">
+                                    </path>
+                                </svg> -->
+
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 64 64">
+                                    <path fill="#1b75bb"
+                                        d="M63.917 57.025a6.89 6.89 0 0 1-6.891 6.895H6.887A6.89 6.89 0 0 1 0 57.025V6.891A6.89 6.89 0 0 1 6.887 0h50.139a6.89 6.89 0 0 1 6.891 6.891v50.134z" />
+                                    <path fill="#fff"
+                                        d="m23.891 28.925l-4.598-1.441c1.704-5.525 6.856-9.553 12.935-9.553c4.07 0 7.721 1.818 10.203 4.672c.023 0 .056.006.081.006c.677.775 1.655 1.276 2.762 1.276a3.668 3.668 0 0 0 3.668-3.667a3.654 3.654 0 0 0-1.512-2.955c-3.809-4.084-9.192-6.669-15.202-6.669c-9.364 0-17.306 6.198-19.943 14.703l-4.521-1.412c-.964.243-1.907 1.191-2.42 2.515l5.432 16.05l13.677-10.09c.33-1.378.093-2.689-.562-3.435m29.249-7.449l-13.676 10.08c-.33 1.38-.091 2.695.562 3.441l4.596 1.438c-1.702 5.524-6.854 9.553-12.935 9.553c-4.07 0-7.722-1.817-10.202-4.675l-.081-.002a3.642 3.642 0 0 0-2.762-1.275a3.667 3.667 0 0 0-3.667 3.669c0 1.214.601 2.287 1.51 2.955c3.807 4.079 9.189 6.667 15.202 6.667c9.366 0 17.307-6.196 19.946-14.705l4.516 1.414c.966-.242 1.91-1.19 2.427-2.518l-5.436-16.04" />
+                                </svg>
+
+                            </button>
+
+                        </li>
+                    </ul>
+                </div>
+
+
+                <span class="navigation__group">
+                    <img class="profile" src="./assets/view/image/user-profile.png" alt="Administrador">
+                </span>
+
+                <div class="dropdown__wrapper hide dropdown__wrapper--fade-in none">
+                    <div class="dropdown__group">
+                        <div class="user-name">Administrador Bello</div>
+                        <div class="email">administrador@cajerogu.com.co</div>
+                    </div>
+                    <hr class="divider">
+
+                    <nav>
+                        <ul>
+                            <li>
+                                <img src="./assets/view/image/profile.svg" alt="Profile"> Mi Perfil
+                            </li>
+                            <li>
+                                <img src="./assets/view/image/settings.svg" alt="Settings"> Configuraciones
+                            </li>
+                            <li style="color: #E3452F;" id="cerrarSesion">
+                                <img src="./assets/view/image/profile.svg" alt="Log Out">Cerrar Sesión
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <!-- <button class="burger-menu">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M4 6l16 0"></path>
+                            <path d="M4 12l16 0"></path>
+                            <path d="M4 18l16 0"></path>
+                        </svg>
+                    </button> -->
+            </nav>
+        </div>
+
+        <!--Carousel panel-->
+        <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel"
+            style="margin: 100px; width: 1200px;">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="2000">
+                    <img src="./assets/view/image/publicatm1.jpg" class="d-block w-100" alt="...">
+
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                    <img src="./assets/view/image/publicatm2.jpg" class="d-block w-100" alt="...">
+
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                    <img src="./assets/view/image/publicatm3.png" class="d-block w-100" alt="...">
+
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <footer>
+
+            <div class="footer-wrapper">
+                <div class="footer-bottom">
+                    <small>© Cajero GU - Grupo Unión <span id="year"></span>, Reservados todos los derechos</small>
+                    <span class='social-links'>
+                        <a href="#" title="Instagram">
+                            <img src="./assets/view/image/instagram.svg" alt='Instagram'>
+                        </a>
+                        <a href="#" title="Linkedin">
+                            <img src="./assets/view/image/linkedin.svg" alt='Linkedin'>
+                        </a>
+                        <a href="#" title="Twitter">
+                            <img src="./assets/view/image/twitter.svg" alt='Twitter'>
+                        </a>
+                        <a href="#" title="Youtube">
+                            <img src="./assets/view/image/youtube.svg" alt='YouTube'>
+                        </a>
+                        <a href="#" title="GitHub">
+                            <img src="./assets/view/image/github.svg" alt='GitHub'>
+                        </a>
+                    </span>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <!--Section panel-->
+    <section id="sectionCheckBalance" class="sectionCheckBalance">
+        <div class="container" style="margin: 80px">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="card" style="width: 230px;">
+                        <div class="card-body">
+                            <h5 class="card-title">Cuentas de Ahorros y Corriente</h5>
+                            <h5 class="card-title">850-255874-35</h5>
+                            <p class="card-text">Saldo Disponible</p>
+                            <p class="card-text"><strong>$ 100.000,00</strong></p>
+                            <button type="button" class="btn btn-warning position-relative">
+                                Conoce más de tu cuenta
+                                <span
+                                    class="position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle">
+                                    <span class="visually-hidden">New alerts</span>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sectionTransfer" class="sectionTransfer">
+        <h1 style="margin: 100px;">Transferir</h1>
+    </section>
+
+    <section id="sectionRecord" class="sectionRecord">
+        <h1 style="margin: 100px;">Consignar</h1>
+    </section>
+
+
+    <!-- CAROLINA -->
+    <section id="sectionWithdraw" class="sectionWithdraw">
+        <!-- <h1 style="margin: 100px;">Retirar</h1> -->
+        <div class="wrappercompleto">
+            <div class="wrapperTit">
+                <div class="log">
+                    <div class="introLog">-- Retiros --</div>
+                    <div class="result"></div>
+                </div>
+            </div>
+            <div class="wrapper">
+                <div class="clearfix users">
+                    <div class="user client">AdmiNISTRADOR</div>
+                </div>
+                <div class="clearfix">
+                    <input class="moneyInput" id="moneyInput" type="number" placeholder="$$$$..." />
+                    <div class="getMoney">Enviar</div> 
+                </div>
+            </div>
+        </div>
+
+    </section>
+     <!-- CAROLINA -->
+
+
+
+    <section id="sectionMovements" class="sectionMovements">
+        <h1 style="margin: 100px;">Movimientos</h1>
+    </section>
+
+    <!--Spinner Loading-->
+    <div id="sound-wave" class="sound-wave">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <!--Alerta de acceso correcto login-->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="liveToastCorrecto" class="toast" role="alert" aria-live="assertive" aria-atomic="true"
+            style="background: #ABEBC6;">
+            <div class="toast-header">
+                <img src="./assets/view/image/guardado.png" class="rounded me-2" alt="guardado" height="20px"
+                    width="20px">
+                <strong class="me-auto">Información</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                Inicio de sesión exitoso
+            </div>
+        </div>
+    </div>
+
+    <!--Alerta de acceso incorrecto login -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="liveToastIncorrecto" class="toast" role="alert" aria-live="assertive" aria-atomic="true"
+            style="background: #FFECB3;">
+            <div class="toast-header">
+                <img src="./assets/view/image/warning.png   " class="rounded me-2" alt="error" height="20px"
+                    width="20px">
+                <strong class="me-auto">Información</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                El usuario o contraseña no son validos
+            </div>
+        </div>
+    </div>
+
+    <!--Alerta de acceso incorrecto cuenta bloqueada -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="liveToastBloqueda" class="toast" role="alert" aria-live="assertive" aria-atomic="true"
+            style="background: #F06565;">
+            <div class="toast-header">
+                <img src="./assets/view/image/error.png" class="rounded me-2" alt="error" height="20px" width="20px">
+                <strong class="me-auto">Cuenta Bloqueda</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                Has excedido el número máximo de intentos. Cuenta bloqueda.❌
+            </div>
+        </div>
+    </div>
+
+    <!--Conexión del ControllerLogin-->
+    <script type="module" src="./assets/controller/ControllerLogin.js"></script>
+
+    <!--Conexión del ControllerOperationApp-->
+    <script type="module" src="./assets/controller/ControllerOperationsApp.js"></script>
+
+    <!--Conexión de Bootstrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
